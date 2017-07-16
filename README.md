@@ -1,1 +1,1 @@
-# rotocalc
+# fantasy baseball calculator
