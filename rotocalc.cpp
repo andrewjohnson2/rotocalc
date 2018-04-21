@@ -1,3 +1,7 @@
+// Fantasy Baseball Calculator
+// Andrew Johnson
+// Email Andrew@AndrewJohnson.io for more information
+
 #include <iostream>
 #include <string>
 #include <vector>
