@@ -45,11 +45,17 @@ void zerototals (vector <member> & players) {
   }
 }
 
-int main() {
+int main(int argc, char* argv[]) {
   string filename;
-  cout << "Please enter the filename" << endl;
-  cin >> filename;
+
   ifstream stats;
+  if (argc != 2) {
+    cerr << "Usage [filename]" << endl;
+    exit(0);
+  }
+
+  filename = argv[1];
+
   stats.open(filename.c_str());
   member temp;
   vector <member> players;
@@ -58,11 +64,7 @@ int main() {
     >> temp.wins >> temp.era >> temp.whip >> temp.saves;
     players.push_back(temp);
   }
-  players[1].name = "Gashouse_Gang";
 
-  for (int i = 0; i < 12; ++i) {
-    cout << players[i].name << endl;
-  }
   zerototals(players);
   makefalse(players);
   for (double w = 12; w > 0; --w) {
